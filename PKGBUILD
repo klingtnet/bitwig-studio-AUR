@@ -4,7 +4,7 @@
 pkgname='bitwig-studio'
 pkgver=2.2
 pkgrel=1
-pkgdesc="Music production system for production, remixing and performance. Lite version limited to 8 tracks for german Beat music magazine."
+pkgdesc="Music production system for production, remixing and performance."
 arch=( 'x86_64' )
 url="http://www.bitwig.com"
 license=('custom')
