@@ -1,28 +1,29 @@
 .PHONY: clean install
 
-PKGNAME:=bitwig-8-track
-PKGVER:=1.3.13
-PKGARCH:=x86_64
+PKGNAME:=bitwig-studio
+PKGVER=2.2
 PKGREL:=1
-PACKAGE:=${PKGNAME}-${PKGVER}-${PKGREL}-${PKGARCH}.pkg.tar.xz
-PACKAGE-SOURCE:="bitwig-8-track-${PKGVER}.deb"
+PACKAGE:=$(PKGNAME)-$(PKGVER)-$(PKGREL)-$(PKGARCH).pkg.tar.xz
+SOURCE_PACKAGE:=$(PKGNAME)-$(PKGVER)-$(PKGREL).src.tar.gz
+DEB:=bitwig-studio-$(PKGVER).deb
+DEB_URL:=https://downloads.bitwig.com/stable/$(PKGVER)/$(DEB)
 
-all: $(PACKAGE) $(PACKAGE-SOURCE)
+all: $(PACKAGE) $(SOURCE_PACKAGE)
 
 $(PACKAGE):
 	updpkgsums
 	makepkg
-	mksrcinfo
 
-$(PACKAGE-SOURCE):
+$(SOURCE_PACKAGE):
 	makepkg --source
+	mksrcinfo
 
 install: $(PACKAGE)
 	sudo pacman -U $<
 
 clean:
-	rm -f ${PKGNAME}-*-${PKGREL}-${PKGARCH}.pkg.tar.xz\
-		${PKGNAME}-*.src.tar.gz\
-		${PKGNAME}-*.deb\
+	rm -f $(PKGNAME)*.pkg.tar.xz\
+		$(PKGNAME)*.src.tar.gz\
+		$(PKGNAME)*.deb
 	rm -fr ./src ./pkg
 

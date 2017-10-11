@@ -1,8 +1,8 @@
 # Maintainer: Andreas Linz <alinz@klingt.net>
 # based on `bitwig-studio-demo` AUR package
 
-pkgname='bitwig-8-track'
-pkgver=1.3.16
+pkgname='bitwig-studio'
+pkgver=2.2
 pkgrel=1
 pkgdesc="Music production system for production, remixing and performance. Lite version limited to 8 tracks for german Beat music magazine."
 arch=( 'x86_64' )
@@ -15,11 +15,11 @@ optdepends=(
              'libav: MP3 support'
            )
 provides=('bitwig-studio')
-conflicts=('bitwig-studio-demo-rc', 'bitwig-studio-demo', 'bitwig-studio')
+conflicts=('bitwig-studio-demo-rc', 'bitwig-studio-demo', 'bitwig-8-track')
 # strip debugging symbols
 options=(!strip)
-source=("https://downloads.bitwig.com/stable/${pkgver}/bitwig-8-track-${pkgver}.deb")
-md5sums=('f99e6054f9e325392bfa96723b901574')
+source=("https://downloads.bitwig.com/stable/${pkgver}/${pkgname}-${pkgver}.deb")
+md5sums=('3b4cc97079592e595fef3ae0715f0cc5')
 
 package() {
   cd $srcdir
@@ -30,7 +30,7 @@ package() {
   install -d $pkgdir/usr/share/{applications,icons}
   install -d $pkgdir/usr/share/licenses/$pkgname
 
-  tar -xf ./data.tar.gz -C "${pkgdir}/"
+  tar -xf ./data.tar.xz -C "${pkgdir}/"
 
   install -m644 ${pkgdir}/opt/${pkgname}/EULA.rtf $pkgdir/usr/share/licenses/$pkgname/LICENSE
 
