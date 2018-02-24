@@ -1,14 +1,22 @@
 .PHONY: clean install
 
 PKGNAME:=bitwig-studio
-PKGVER=2.2
+PKGVER=2.3
+PKGBETA=beta4
+PKGCHANNEL=beta
 PKGREL:=1
 PACKAGE:=$(PKGNAME)-$(PKGVER)-$(PKGREL)-$(PKGARCH).pkg.tar.xz
-SOURCE_PACKAGE:=$(PKGNAME)-$(PKGVER)-$(PKGREL).src.tar.gz
+SOURCE_PACKAGE:=$(PKGNAME)-$(PKGVER)$(PKGBETA)-$(PKGREL).src.tar.gz
 DEB:=bitwig-studio-$(PKGVER).deb
 DEB_URL:=https://downloads.bitwig.com/stable/$(PKGVER)/$(DEB)
 
-all: $(PACKAGE) $(SOURCE_PACKAGE)
+all: prepare $(PACKAGE) $(SOURCE_PACKAGE)
+
+prepare: PKGBUILD
+	cp $<.tmpl $<
+	sed -i 's/<PKGVER>/$(PKGVER)/g' $<
+	sed -i 's/<PKGBETA>/$(PKGBETA)/g' $<
+	sed -i 's/<PKGCHANNEL>/$(PKGCHANNEL)/g' $<
 
 $(PACKAGE):
 	updpkgsums
