@@ -2,8 +2,8 @@
 # based on `bitwig-studio-demo` AUR package
 
 pkgname='bitwig-studio'
-pkgver=2.3
-pkgbeta=beta5
+pkgver=2.4
+pkgbeta=beta1
 pkgchannel=beta
 pkgrel=1
 pkgdesc="Music production system for production, remixing and performance."
@@ -17,11 +17,11 @@ optdepends=(
              'libav: MP3 support'
            )
 provides=('bitwig-studio')
-conflicts=('bitwig-studio-demo-rc', 'bitwig-studio-demo', 'bitwig-8-track')
+conflicts=('bitwig-studio-demo-rc' 'bitwig-studio-demo' 'bitwig-8-track')
 # strip debugging symbols
 options=(!strip)
 source=("https://downloads.bitwig.com/${pkgchannel}/${pkgver}/${pkgname}-${pkgver}${pkgbeta}.deb")
-md5sums=('738e71d1ae1df99562a20366569399c9')
+md5sums=('eff9b4ca964a1e30696504653d3c0e43')
 
 package() {
   cd $srcdir

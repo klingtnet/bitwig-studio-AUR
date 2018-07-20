@@ -1,8 +1,8 @@
 .PHONY: clean install
 
 PKGNAME:=bitwig-studio
-PKGVER=2.3
-PKGBETA=beta5
+PKGVER=2.4
+PKGBETA=beta1
 PKGCHANNEL=beta
 PKGREL:=1
 PACKAGE:=$(PKGNAME)-$(PKGVER)-$(PKGREL)-$(PKGARCH).pkg.tar.xz
