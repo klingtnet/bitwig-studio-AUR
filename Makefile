@@ -2,9 +2,9 @@
 
 PKGNAME:=bitwig-studio
 PKGVER=2.4
-PKGBETA=beta1
+PKGBETA=beta2
 PKGCHANNEL=beta
-PKGREL:=1
+PKGREL:=2
 PACKAGE:=$(PKGNAME)-$(PKGVER)-$(PKGREL)-$(PKGARCH).pkg.tar.xz
 SOURCE_PACKAGE:=$(PKGNAME)-$(PKGVER)$(PKGBETA)-$(PKGREL).src.tar.gz
 DEB:=bitwig-studio-$(PKGVER).deb
