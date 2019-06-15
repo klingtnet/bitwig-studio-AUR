@@ -30,7 +30,7 @@ install: $(PACKAGE)
 	sudo pacman -U $<
 
 clean:
-	rm -f $(PKGNAME)*.pkg.tar.xz\
+	rm -f $(PKGNAME)*.pkg.tar.zst\
 		$(PKGNAME)*.src.tar.gz\
 		$(PKGNAME)*.deb
 	rm -fr ./src ./pkg
