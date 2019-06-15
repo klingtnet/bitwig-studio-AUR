@@ -18,8 +18,8 @@ pkgbase = bitwig-studio
 	conflicts = bitwig-studio-demo
 	conflicts = bitwig-8-track
 	options = !strip
-	source = https://downloads.bitwig.com/beta/3.0/bitwig-studio-3.0beta5.deb
-	md5sums = dd97e921a1b24273727da37f69308f9c
+	source = https://downloads.bitwig.com/beta/3.0/bitwig-studio-3.0beta6.deb
+	md5sums = 428efc2acb9fb3eaa401db4ff55d787d
 
 pkgname = bitwig-studio
 

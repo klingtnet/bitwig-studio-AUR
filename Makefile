@@ -2,7 +2,7 @@
 
 PKGNAME:=bitwig-studio
 PKGVER=3.0
-PKGBETA=beta5
+PKGBETA=beta6
 PKGCHANNEL=beta
 PKGREL:=1
 PACKAGE:=$(PKGNAME)-$(PKGVER)-$(PKGREL)-$(PKGARCH).pkg.tar.zst
