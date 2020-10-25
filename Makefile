@@ -24,7 +24,7 @@ $(PACKAGE):
 
 $(SOURCE_PACKAGE):
 	makepkg --source
-	mksrcinfo
+	makepkg --printsrcinfo > .SRCINFO
 
 install: $(PACKAGE)
 	sudo pacman -U $<
