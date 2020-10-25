@@ -10,20 +10,22 @@ PACKAGE:=$(PKGNAME)-$(PKGVER)-$(PKGREL)-$(PKGARCH).pkg.tar.zst
 SOURCE_PACKAGE:=$(PKGNAME)-$(PKGVER)$(PKGBETA)-$(PKGREL).src.tar.gz
 DEB:=bitwig-studio-$(PKGVER).deb
 
-all: prepare $(PACKAGE) $(SOURCE_PACKAGE)
+all: PKGBUILD $(PACKAGE) $(SOURCE_PACKAGE)
 
-prepare: PKGBUILD
+PKGBUILD:
 	cp $<.tmpl $<
 	sed -i 's/<PKGVER>/$(PKGVER)/g' $<
 	sed -i 's/<PKGBETA>/$(PKGBETA)/g' $<
 	sed -i 's/<PKGCHANNEL>/$(PKGCHANNEL)/g' $<
 
-$(PACKAGE):
+$(PACKAGE): .SRCINFO PKGBUILD
 	updpkgsums
 	makepkg
 
-$(SOURCE_PACKAGE):
+$(SOURCE_PACKAGE): .SRCINFO
 	makepkg --source
+
+.SRCINFO:
 	makepkg --printsrcinfo > .SRCINFO
 
 install: $(PACKAGE)
