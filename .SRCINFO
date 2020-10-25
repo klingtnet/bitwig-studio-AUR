@@ -1,6 +1,6 @@
 pkgbase = bitwig-studio
 	pkgdesc = Music production system for production, remixing and performance.
-	pkgver = 3.0
+	pkgver = 3.3
 	pkgrel = 1
 	url = http://www.bitwig.com
 	arch = x86_64
@@ -18,8 +18,8 @@ pkgbase = bitwig-studio
 	conflicts = bitwig-studio-demo
 	conflicts = bitwig-8-track
 	options = !strip
-	source = https://downloads.bitwig.com/stable/3.0/bitwig-studio-3.0.deb
-	md5sums = 65782a4f9d4d6425c2be57440580eb2a
+	source = https://downloads.bitwig.com/secure/beta/3.3/bitwig-studio-3.3beta2.deb
+	md5sums = 1abfccdb1c9c52a691e8cb4adb9b4d1d
 
 pkgname = bitwig-studio
 

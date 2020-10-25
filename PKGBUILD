@@ -2,9 +2,9 @@
 # based on `bitwig-studio-demo` AUR package
 
 pkgname='bitwig-studio'
-pkgver=3.0
-pkgbeta=
-pkgchannel=stable
+pkgver=3.3
+pkgbeta=beta2
+pkgchannel=beta
 pkgrel=1
 pkgdesc="Music production system for production, remixing and performance."
 arch=( 'x86_64' )
@@ -20,8 +20,8 @@ provides=('bitwig-studio')
 conflicts=('bitwig-studio-demo-rc' 'bitwig-studio-demo' 'bitwig-8-track')
 # strip debugging symbols
 options=(!strip)
-source=("https://downloads.bitwig.com/${pkgchannel}/${pkgver}/${pkgname}-${pkgver}${pkgbeta}.deb")
-md5sums=('65782a4f9d4d6425c2be57440580eb2a')
+source=("https://downloads.bitwig.com/secure/${pkgchannel}/${pkgver}/${pkgname}-${pkgver}${pkgbeta}.deb")
+md5sums=('1abfccdb1c9c52a691e8cb4adb9b4d1d')
 
 package() {
   cd $srcdir
