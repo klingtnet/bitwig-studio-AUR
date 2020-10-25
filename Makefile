@@ -8,7 +8,6 @@ PKGREL:=1
 PACKAGE:=$(PKGNAME)-$(PKGVER)-$(PKGREL)-$(PKGARCH).pkg.tar.zst
 SOURCE_PACKAGE:=$(PKGNAME)-$(PKGVER)$(PKGBETA)-$(PKGREL).src.tar.gz
 DEB:=bitwig-studio-$(PKGVER).deb
-DEB_URL:=https://downloads.bitwig.com/stable/$(PKGVER)/$(DEB)
 
 all: prepare $(PACKAGE) $(SOURCE_PACKAGE)
 
