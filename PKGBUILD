@@ -3,7 +3,7 @@
 
 pkgname='bitwig-studio'
 pkgver=3.3
-pkgbeta=beta2
+pkgbeta=beta5
 pkgchannel=beta
 pkgrel=1
 pkgdesc="Music production system for production, remixing and performance."
@@ -21,7 +21,7 @@ conflicts=('bitwig-studio-demo-rc' 'bitwig-studio-demo' 'bitwig-8-track')
 # strip debugging symbols
 options=(!strip)
 source=("https://downloads.bitwig.com/secure/${pkgchannel}/${pkgver}/${pkgname}-${pkgver}${pkgbeta}.deb")
-md5sums=('1abfccdb1c9c52a691e8cb4adb9b4d1d')
+md5sums=('dc00bcce9197419064ddbde68c0c6ad0')
 
 package() {
   cd $srcdir
