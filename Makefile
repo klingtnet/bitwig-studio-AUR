@@ -12,11 +12,11 @@ DEB:=bitwig-studio-$(PKGVER).deb
 
 all: PKGBUILD $(PACKAGE) $(SOURCE_PACKAGE)
 
-PKGBUILD:
-	cp $<.tmpl $<
-	sed -i 's/<PKGVER>/$(PKGVER)/g' $<
-	sed -i 's/<PKGBETA>/$(PKGBETA)/g' $<
-	sed -i 's/<PKGCHANNEL>/$(PKGCHANNEL)/g' $<
+PKGBUILD: Makefile
+	cp $@.tmpl $@
+	sed -i 's/<PKGVER>/$(PKGVER)/g' $@
+	sed -i 's/<PKGBETA>/$(PKGBETA)/g' $@
+	sed -i 's/<PKGCHANNEL>/$(PKGCHANNEL)/g' $@
 
 $(PACKAGE): .SRCINFO PKGBUILD
 	updpkgsums
