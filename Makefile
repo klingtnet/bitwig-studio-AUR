@@ -20,10 +20,10 @@ PKGBUILD: Makefile
 
 $(PACKAGE): .SRCINFO PKGBUILD
 	updpkgsums
-	makepkg
+	makepkg -f
 
 $(SOURCE_PACKAGE): .SRCINFO
-	makepkg --source
+	makepkg --source -f
 
 .SRCINFO:
 	makepkg --printsrcinfo > .SRCINFO
