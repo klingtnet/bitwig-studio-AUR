@@ -2,7 +2,7 @@
 
 PKGNAME:=bitwig-studio
 PKGVER=3.3
-PKGBETA=beta5
+PKGBETA=beta6
 PKGCHANNEL=beta
 PKGREL:=1
 PKGARCH:=x86_64
