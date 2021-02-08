@@ -1,7 +1,7 @@
 .PHONY: clean install
 
 PKGNAME:=bitwig-studio
-PKGVER=3.3.1
+PKGVER=3.3.3
 PKGBETA=
 PKGCHANNEL=stable
 PKGREL:=1
