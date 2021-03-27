@@ -2,7 +2,7 @@
 # based on `bitwig-studio-demo` AUR package
 
 pkgname='bitwig-studio'
-pkgver=3.3.3
+pkgver=3.3.6
 pkgbeta=
 pkgchannel=stable
 pkgrel=1
@@ -21,7 +21,7 @@ conflicts=('bitwig-studio-demo-rc' 'bitwig-studio-demo' 'bitwig-8-track')
 # strip debugging symbols
 options=(!strip)
 source=("https://downloads.bitwig.com/secure/${pkgchannel}/${pkgver}/${pkgname}-${pkgver}${pkgbeta}.deb")
-md5sums=('073295b0903ee1ce23ac9b0be9cd674b')
+md5sums=('d93c2fc4a2005b94e10baa7544123d0f')
 
 package() {
   cd $srcdir
